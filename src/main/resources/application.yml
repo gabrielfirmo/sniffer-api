@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /sniffer
+  address: 192.168.15.9
+
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/sniffer
+    username: postgres
+    password: 123456
+
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+application:
+  description: API Sniffer
