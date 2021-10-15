@@ -1,21 +1,8 @@
 server:
-  port: ${PORT:80}
+  port: ${PORT:8080}
 spring:
   datasource:
-    driver-class-name: org.postgresql.Driver
-    url:     postgres://kasutkbbxzkzxk:b3e957b9c62d2466459857eb4211fa15d28933e4d0c4a71b3c3865d6fcbb3132@ec2-54-147-76-191.compute-1.amazonaws.com:5432/d8l5uvngsr1uvi
-    username: kasutkbbxzkzxk
-    password: b3e957b9c62d2466459857eb4211fa15d28933e4d0c4a71b3c3865d6fcbb3132
+    url: ${DATABASE_URL}
 
   jpa:
     show-sql: true
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-    generate-ddl: true
-    hibernate:
-      ddl-auto: none
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-
-application:
-  description: API Sniffer
