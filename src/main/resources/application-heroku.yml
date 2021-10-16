@@ -8,5 +8,5 @@ spring:
 
   jpa:
     show-sql: true
-application:
+application: 
   description: API Sniffer
