@@ -1,1 +1,1 @@
-java $JAVA_OPTS -Dspring.profiles.active=heroku --port $PORT target/sniffer-0.0.1-SNAPSHOT.war
+web: java -Dspring.profiles.active=heroku -jar target/*.war
