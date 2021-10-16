@@ -1,1 +1,1 @@
-java $JAVA_OPTS -jar webapp-runner.jar $WEBAPP_RUNNER_OPTS --port $PORT target/sniffer-0.0.1-SNAPSHOT.war
+java $JAVA_OPTS -Dspring.profiles.active=heroku --port $PORT target/sniffer-0.0.1-SNAPSHOT.war
