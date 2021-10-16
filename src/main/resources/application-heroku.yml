@@ -1,5 +1,7 @@
 server:
   port: ${PORT:8080}
+  servlet:
+    context-path: /sniffer
 spring:
   datasource:
     url: ${DATABASE_URL}
