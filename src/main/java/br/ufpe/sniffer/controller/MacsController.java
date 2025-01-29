@@ -9,12 +9,15 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
+
 @RestController
 @RequestMapping(value = "/macs")
+@CrossOrigin(origins = "*")
 public class MacsController {
 
     @Autowired
     private MacsRepository macsRepository;
+
 
     @GetMapping
     public List<Macs> getAllMacs(){

@@ -13,8 +13,10 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+
 @RestController
 @RequestMapping(value = "/logs")
+@CrossOrigin(origins = "*")
 public class LogsController {
     @Autowired
     private LogsRepository logsRepository;
@@ -34,7 +36,6 @@ public class LogsController {
 
         return logsRepository.save(log);
     }
-
     @GetMapping
     public List<Logs> getLogs(){
         return logsRepository.findAll();

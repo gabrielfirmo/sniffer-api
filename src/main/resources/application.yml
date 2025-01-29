@@ -1,16 +1,15 @@
 server:
-  port: 8080
+  port: 5000
   servlet:
     context-path: /sniffer
-  address: 192.168.15.9
 
 
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/sniffer
-    username: postgres
-    password: 123456
+    url: jdbc:postgresql://${DB_URL}:5432/sniffer
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
 
   jpa:
     show-sql: true
